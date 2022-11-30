@@ -18,7 +18,7 @@ server.use("/accounts", (req, res, next) => {
         error: "Provide wallet currency",
       });
     }
-
+    console.log("hit post>>>>>>>>>>>>>>")
     const wallets = router.db.getState().wallets;
     const walletIndex = wallets.findIndex(
       (wallet) => wallet.currency === req.body.currency

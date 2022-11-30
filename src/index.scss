@@ -1,11 +1,285 @@
+@font-face {
+  font-family: Aribau Grotesk;
+  src: url('./fonts/aribau-grotesk-medium.otf');
+}
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: Aribau Grotesk;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+.d-flex{
+  display: flex
+}
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    gap: 10%;
+}
+
+.navbar{
+    box-shadow:  0px 4px 12px 0px #0000000D;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 100;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+    align-items: center;
+}
+
+.menu-items{
+    display: flex;
+}
+
+.dot {
+  height: 36px;
+  width: 36px;
+  min-height: 36px;
+  display: inline-grid;
+  align-items: center;
+  text-align: center;
+  background-color: #bbb;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 500;
+
+
+}
+
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    color: #3E4C59;
+    font-size: 14px;
+    display: inline-grid;
+    align-items: center;
+    font-weight: 500;
+}
+
+.amount{
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 16px;
+color: #FFFFFF;
+margin: 20px 0px 20px 0px
+}
+
+
+
+@media (max-width: 500px){
+    .navbar-container input[type="checkbox"]:checked ~ .logo{
+        display: none;
+    }
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 120px;
+  height: 100vh;
+  width: 100%
+}
+
+.col-lg-4 {
+  flex: 0 0 auto;
+  width: 20%;
+  // padding: 50px;
+}
+
+.col-lg-8 {
+  flex: 0 0 auto;
+  width: 70%;
+  position: relative; 
+}
+
+.vertical-menu {
+  margin: 0 auto;
+  width: 240px;
+
+}
+
+.vertical-menu a {
+  color: #3E4C59;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  width: 240px;
+  height: 44px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.section-with-cards{
+  display: flex;
+  border-bottom: 1px solid #D3D5D8;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  justify-content: space-between;
+}
+
+.section-with-no-cards{
+ display: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #F5F7FA;
+}
+
+.vertical-menu a.active {
+  background-color: #F5F7FA;
+  color: #000000;
+}
+
+.loader, .error-container{
+    position: absolute;  
+    top: 40%;  
+    left: 50%;  
+    transform: translate(-50%, -50%);  
+}
+
+.error-container svg{
+  display: block;
+  margin: 0 auto;
+}
+
+.ne{
+font-family: Aribau Grotesk;
+font-size: 18px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: center;
+margin-bottom: 42px;
+margin-top: 20px
+}
+.try-again{
+  background: #000000;
+ border-radius: 40px;
+ padding: 18px 54px;
+ height: 54px;
+ color: #FFFFFF;
+ font-family: 'Aribau Grotesk';
+ cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
+}
+
+.card{
+  background: #111111;
+  transition: 0.3s;
+  height: 150px;
+  width: 240px;
+  left: 0px;
+  top: 0px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px 0px #8A8A8A80;
+  padding: 20px;
+}
+
+.CircularSVG{
+  display: flex;
+  margin-left: auto;
+}
+
+.modal-section{
+  width: 85%;
+  margin: 74px auto
+}
+
+.modal-section label{
+  font-family: Aribau Grotesk;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #3E4C59;
+}
+
+.custom-select{
+  margin-top: 14px;
+}
+
+.modal-section select{
+  height: 64px;
+  width: 392px;
+  border-radius: 5px;
+  border: 1px solid #CBD2D9;
+  padding: 15px;
+
+}
+.modal-section .top{
+ justify-content: space-between
+}
+
+.crp-text{
+  font-family: Aribau Grotesk;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #3E4C59;
+  margin-top: 50px;
+  margin-bottom: 43px;
+
+}
+
+ .create-wallet{
+    margin: 20px auto;
+    display: flex;
+}
+
+.alert-danger{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 13px 20px;
+gap: 88px;
+width: 392px;
+height: 50px;
+background: #FFF4F4;
+border: 1px solid #E0B3B2;
+border-radius: 8px;
+color:  #D72C0D;
+
+}
+
+.alert-danger svg path {
+ fill: red
 }

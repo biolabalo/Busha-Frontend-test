@@ -1,5 +1,12 @@
+import Navbar from "./components/navbar";
+import HomePage from './pages/Home'
 function App() {
-  return <h1>Busha</h1>;
+  return (
+    <>
+      <Navbar />
+      <HomePage />
+    </>
+  );
 }
 
 export default App;

@@ -136,6 +136,8 @@ test("can submit wallet form successfully POST'/accounts'", async () => {
 
   const walletSelect = screen.getByRole("combobox");
 
+  console.log('ww>>>>>>>>>>>>>>>>>>>>>>>>>.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', walletSelect)
+
   userEvent.selectOptions(walletSelect, "XLM");
 
   userEvent.click(submitButton);
