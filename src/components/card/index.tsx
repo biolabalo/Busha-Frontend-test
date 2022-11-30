@@ -4,7 +4,7 @@ const Card = ({ eachCardDetail }: { eachCardDetail: WalletType }) => {
   return (
     <div className="card">
       <div className="d-flex">
-        <img src={eachCardDetail.imgURL} />{" "}
+        <img src={eachCardDetail.imgURL} alt={eachCardDetail.name} />{" "}
         <span style={{ color: "#9AA5B1", margin: "10px" }}>{eachCardDetail.name}</span>
       </div>
       <p className="amount">

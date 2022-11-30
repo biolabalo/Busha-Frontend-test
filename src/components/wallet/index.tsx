@@ -1,5 +1,4 @@
 import useFetch from "../../../src/useFetch";
-import WalletModal from "../../components/modal";
 import Card from "../../components/card";
 import LoaderContainer from "../../components/shared/LoaderContainer";
 import ErrorContainer from "../../components/shared/ErrorContainer";

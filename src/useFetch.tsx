@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 export interface WalletType {
     id:              string;
@@ -18,7 +18,7 @@ const useFetch = (url: string) => {
     const [loading, setLoading] = useState(true);
     const [errorMsg, setErrorMsg] = useState('');
    
-    const fetchWallets = async() => {
+    const fetchWallets =  useCallback(async() => {
         try {
             const response = await fetch(url);
             const result = await response.json();
@@ -28,10 +28,10 @@ const useFetch = (url: string) => {
             setLoading(false);
             error instanceof Error && setErrorMsg(error.message);
         }
-    }
+    }, [url])
     useEffect(() => {
         fetchWallets()
-    }, [url]);
+    }, [url, fetchWallets]);
 
     return [loading, data, errorMsg ,fetchWallets ];
 };

@@ -1,13 +1,13 @@
 const SideMenu = () => {
   return (
     <div className="vertical-menu">
-      <a href="#" className="active">
+      <li className="active">
         Wallet
-      </a>
-      <a href="#">Prices</a>
-      <a href="#">Peer2Peer</a>
-      <a href="#">Activity</a>
-      <a href="#">Settings</a>
+      </li>
+      <li>Prices</li>
+      <li>Peer2Peer</li>
+      <li>Activity</li>
+      <li>Settings</li>
     </div>
   );
 };

@@ -123,7 +123,7 @@ main{
 
 }
 
-.vertical-menu a {
+.vertical-menu li {
   color: #3E4C59;
   display: block;
   padding: 12px;
@@ -150,11 +150,11 @@ main{
  display: none;
 }
 
-.vertical-menu a:hover {
+.vertical-menu li:hover {
   background-color: #F5F7FA;
 }
 
-.vertical-menu a.active {
+.vertical-menu li.active {
   background-color: #F5F7FA;
   color: #000000;
 }
