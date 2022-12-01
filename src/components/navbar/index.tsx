@@ -1,7 +1,8 @@
+import BushaLogo from './busha'
 const Navbar = () => {
     return ( <nav className="navbar">
     <div className="navbar-container container">
-      <h1 className="logo">Navbar</h1>
+      <BushaLogo />
       <ul className="menu-items">
        <span className="dot">O</span>
         <li>Oluwatobi Akindunjoye</li>
